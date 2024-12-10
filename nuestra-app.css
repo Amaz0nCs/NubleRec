@@ -1,0 +1,286 @@
+.nuestra-app-container1 {
+  width: 100%;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.nuestra-app-navbar {
+  align-items: center;
+  flex-direction: column;
+}
+.nuestra-app-navbar-interactive {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nuestra-app-logo1 {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nuestra-app-image1 {
+  width: 22px;
+  object-fit: cover;
+  margin-right: 14px;
+}
+.nuestra-app-desktop-menu {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+.nuestra-app-links1 {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.nuestra-app-text11 {
+  color: var(--dl-color-scheme-green80);
+  margin-right: var(--dl-space-space-twounits);
+  text-decoration: none;
+}
+.nuestra-app-navlink1 {
+  color: var(--dl-color-scheme-green80);
+  margin-right: var(--dl-space-space-twounits);
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.nuestra-app-navlink2 {
+  color: var(--dl-color-scheme-green80);
+  margin-right: var(--dl-space-space-twounits);
+  text-decoration: none;
+}
+.nuestra-app-text12 {
+  color: var(--dl-color-scheme-green80);
+  margin-right: var(--dl-space-space-twounits);
+}
+.nuestra-app-burger-menu {
+  display: none;
+}
+.nuestra-app-icon1 {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+}
+.nuestra-app-mobile-menu {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  padding: 32px;
+  z-index: 100;
+  position: absolute;
+  transform: translateX(100%);
+  transition: 0.5s;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.nuestra-app-nav {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.nuestra-app-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--dl-space-space-threeunits);
+  justify-content: space-between;
+}
+.nuestra-app-logo2 {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nuestra-app-image2 {
+  width: 22px;
+  object-fit: cover;
+  margin-right: 14px;
+}
+.nuestra-app-close-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nuestra-app-icon3 {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+}
+.nuestra-app-links2 {
+  flex: 0 0 auto;
+  display: flex;
+  align-self: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.nuestra-app-navlink3 {
+  margin-bottom: var(--dl-space-space-unit);
+  text-decoration: none;
+}
+.nuestra-app-navlink4 {
+  margin-bottom: var(--dl-space-space-unit);
+  text-decoration: none;
+}
+.nuestra-app-navlink5 {
+  margin-bottom: var(--dl-space-space-unit);
+  text-decoration: none;
+}
+.nuestra-app-text14 {
+  margin-bottom: var(--dl-space-space-unit);
+}
+.nuestra-app-buttons {
+  display: flex;
+  margin-top: var(--dl-space-space-unit);
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nuestra-app-section {
+  height: 920px;
+  padding-bottom: 0px;
+}
+.nuestra-app-max-width2 {
+  align-items: stretch;
+}
+.nuestra-app-hero-image {
+  width: 640px;
+  height: 426px;
+  object-fit: contain;
+  margin-left: -250px;
+  border-radius: 48px;
+}
+.nuestra-app-content {
+  width: 50%;
+  display: flex;
+  margin-left: var(--dl-space-space-twounits);
+  flex-direction: column;
+  justify-content: center;
+}
+.nuestra-app-text15 {
+  color: var(--dl-color-scheme-green80);
+  margin-bottom: var(--dl-space-space-unit);
+}
+.nuestra-app-text16 {
+  font-size: 42px;
+  font-style: normal;
+  font-family: Urbanist;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: var(--dl-space-space-twounits);
+}
+.nuestra-app-text18 {
+  color: var(--dl-color-scheme-orange100);
+}
+.nuestra-app-text20 {
+  color: var(--dl-color-scheme-orange100);
+}
+.nuestra-app-text22 {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: var(--dl-space-space-threeunits);
+}
+.nuestra-app-container2 {
+  flex: 0 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+}
+@media(max-width: 991px) {
+  .nuestra-app-desktop-menu {
+    display: none;
+  }
+  .nuestra-app-navlink1 {
+    color: var(--dl-color-scheme-green80);
+    font-size: 16px;
+    font-style: normal;
+    font-family: Titillium Web;
+    font-weight: 600;
+    line-height: 1.5;
+    text-transform: none;
+    text-decoration: none;
+  }
+  .nuestra-app-navlink2 {
+    color: var(--dl-color-scheme-green80);
+    font-size: 16px;
+    font-style: normal;
+    font-family: Titillium Web;
+    font-weight: 600;
+    line-height: 1.5;
+    text-transform: none;
+    text-decoration: none;
+  }
+  .nuestra-app-burger-menu {
+    display: flex;
+  }
+  .nuestra-app-max-width2 {
+    height: 746px;
+    position: relative;
+    border-color: var(--dl-color-scheme-green100);
+    border-width: 0px;
+    flex-direction: column;
+  }
+  .nuestra-app-hero-image {
+    width: 715px;
+    height: 513px;
+    margin-left: 120px;
+    border-width: 0px;
+    margin-right: 167px;
+  }
+  .nuestra-app-content {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media(max-width: 767px) {
+  .nuestra-app-links1 {
+    display: none;
+  }
+  .nuestra-app-burger-menu {
+    align-items: center;
+    justify-content: center;
+  }
+  .nuestra-app-navlink3 {
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .nuestra-app-navlink4 {
+    margin-left: 0;
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .nuestra-app-navlink5 {
+    margin-left: 0;
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .nuestra-app-text14 {
+    margin-left: 0;
+    margin-bottom: var(--dl-space-space-unit);
+  }
+  .nuestra-app-hero-image {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .nuestra-app-content {
+    width: 100%;
+    margin-right: 0px;
+  }
+}
+@media(max-width: 479px) {
+  .nuestra-app-mobile-menu {
+    padding: 16px;
+  }
+  .nuestra-app-max-width2 {
+    height: 721px;
+    position: relative;
+  }
+  .nuestra-app-hero-image {
+    width: 440px;
+    height: 288px;
+    margin: 0px;
+  }
+}

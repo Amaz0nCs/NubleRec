@@ -1,0 +1,27 @@
+.features9-layout186 {
+  width: 100%;
+  height: 430px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+.features9-fragment1 {
+  display: contents;
+}
+.features9-text12 {
+  display: inline-block;
+  z-index: 2;
+  text-align: center;
+}
+.features9-fragment2 {
+  display: contents;
+}
+.features9-text16 {
+  display: inline-block;
+  z-index: 2;
+  text-align: center;
+}

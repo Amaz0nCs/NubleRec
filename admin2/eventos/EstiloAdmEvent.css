@@ -1,0 +1,648 @@
+/* Estilos generales */
+body {
+  font-family: 'Titillium Web', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FBF1EB;
+  overflow-x: hidden;
+}
+
+.edicion-puntos-container {
+  width: 100%;
+  display: flex;
+  box-shadow: 5px 5px 10px 10px #d4d4d4;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+
+.edicion-puntos-navbar-interactive {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.edicion-puntos-navbar {
+  align-items: center;
+  flex-direction: column;
+}
+
+.edicion-puntos-logo1 {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.edicion-puntos-image1 {
+  width: 22px;
+  object-fit: cover;
+  margin-right: 14px;
+}
+
+.edicion-puntos-desktop-menu {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.edicion-puntos-links1 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.edicion-puntos-text2 {
+  text-align: center;
+  margin-left: var(--dl-space-space-twounits);
+  text-decoration: none;
+}
+
+.edicion-puntos-navlink {
+  margin-left: var(--dl-space-space-twounits);
+  text-decoration: none;
+}
+
+.edicion-puntos-burger-menu {
+  display: none;
+}
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #FBF1EB;
+  overflow-x: hidden; /* Evita el desbordamiento horizontal */
+}
+
+
+/* Contenedor de puntos */
+.puntos-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 20px;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+/* Botón para abrir el formulario */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para la tabla de datos */
+#dataGrid {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #77c5e9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilos para la tabla */
+.campana-table {
+  width: 100%;
+  table-layout: fixed; /* Asegura que las columnas tengan un ancho fijo */
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+  color: #333;
+  word-wrap: break-word;
+}
+
+.campana-table th, .campana-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+  word-wrap: break-word;
+}
+
+.campana-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.campana-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.campana-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Botones dentro de la tabla */
+.campana-table td button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background-color 0.3s;
+}
+
+.campana-table td button:hover {
+  background-color: #45a049;
+}
+
+.campana-table td button:nth-child(2) {
+  background-color: #f44336;
+}
+
+.campana-table td button:nth-child(2):hover {
+  background-color: #e53935;
+}
+
+/* Estilo de impresión */
+@media print {
+  .campana-table {
+    width: 100%;
+    table-layout: fixed; /* Asegura que las columnas tengan un ancho consistente */
+    page-break-inside: auto;
+    font-size: 12px;
+  }
+
+  /* Asignamos anchos fijos a las columnas */
+  .campana-table th:nth-child(1), 
+  .campana-table td:nth-child(1) {
+    width: 10%; /* Ancho para la columna ID */
+  }
+
+  .campana-table th:nth-child(2), 
+  .campana-table td:nth-child(2) {
+    width: 20%; /* Ancho para la columna Nombre Campana */
+  }
+
+  .campana-table th:nth-child(3), 
+  .campana-table td:nth-child(3) {
+    width: 30%; /* Ancho para la columna Descripción */
+  }
+
+  .campana-table th:nth-child(4), 
+  .campana-table td:nth-child(4) {
+    width: 10%; /* Ancho para la columna Fecha Inicio */
+  }
+
+  .campana-table th:nth-child(5), 
+  .campana-table td:nth-child(5) {
+    width: 10%; /* Ancho para la columna Fecha Termino */
+  }
+
+  .campana-table th:nth-child(6), 
+  .campana-table td:nth-child(6) {
+    width: 15%; /* Ancho para la columna Dirección */
+  }
+
+  .campana-table th:nth-child(7), 
+  .campana-table td:nth-child(7) {
+    width: 10%; /* Ancho para la columna Latitud */
+  }
+
+  .campana-table th:nth-child(8), 
+  .campana-table td:nth-child(8) {
+    width: 10%; /* Ancho para la columna Longitud */
+  }
+
+  .campana-table th:nth-child(9), 
+  .campana-table td:nth-child(9) {
+    width: 15%; /* Ancho para la columna Ciudad */
+  }
+
+  .campana-table td, .campana-table th {
+    word-wrap: break-word;
+  }
+
+  /* Evitar el desbordamiento de contenido */
+  body {
+    overflow-x: visible !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .puntos-wrapper {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .campana-table th, .campana-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .campana-table td button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+/* Botón para abrir el formulario */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Formulario flotante */
+.form-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Estilo de los campos del formulario */
+form label, form input, form select, form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px; /* Aumento de padding para mayor comodidad */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px; /* Ajuste de tamaño de fuente */
+}
+
+/* Estilo del botón dentro del formulario */
+form button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos específicos para el encabezado del formulario */
+form h1 {
+  text-align: center; /* Alinea el encabezado en el centro */
+  font-size: 24px; /* Tamaño del encabezado */
+  margin-bottom: 20px; /* Espacio debajo del encabezado */
+  font-weight: bold; /* Asegura que el encabezado sea destacado */
+  color: #333; /* Color del encabezado */
+}
+
+/* Estilo de los campos del formulario */
+form label, form input, form select, form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.edicion-puntos-icon10 {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+}
+
+.edicion-puntos-mobile-menu {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  padding: 32px;
+  z-index: 100;
+  position: absolute;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.edicion-puntos-nav {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.edicion-puntos-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--dl-space-space-threeunits);
+  justify-content: space-between;
+}
+
+.edicion-puntos-logo2 {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.edicion-puntos-image2 {
+  width: 22px;
+  object-fit: cover;
+  margin-right: 14px;
+}
+
+.edicion-puntos-close-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edicion-puntos-icon12 {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+}
+
+.edicion-puntos-links2 {
+  flex: 0 0 auto;
+  display: flex;
+  align-self: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.edicion-puntos-eventos {
+  margin-bottom: var(--dl-space-space-unit);
+  text-decoration: none;
+}
+
+.edicion-puntos-puntos {
+  margin-bottom: var(--dl-space-space-unit);
+  text-decoration: none;
+}
+
+.edicion-puntos-icon14 {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+  margin-right: var(--dl-space-space-twounits);
+}
+
+.edicion-puntos-icon16 {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+  margin-right: var(--dl-space-space-twounits);
+}
+
+.edicion-puntos-icon18 {
+  width: var(--dl-size-size-xsmall);
+  height: var(--dl-size-size-xsmall);
+}
+
+
+/* Contenedor de puntos */
+.puntos-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 20px;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+/* Botón para abrir el formulario */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para la tabla de datos */
+#dataGrid {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #77c5e9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Estilos para la tabla */
+.campana-table {
+  width: 100%;
+  table-layout: fixed; /* Asegura que las columnas tengan un ancho fijo */
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 14px;
+  color: #333;
+  word-wrap: break-word;
+}
+
+.campana-table th, .campana-table td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+  word-wrap: break-word;
+}
+
+.campana-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.campana-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.campana-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Botones dentro de la tabla */
+.campana-table td button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: background-color 0.3s;
+}
+
+.campana-table td button:hover {
+  background-color: #45a049;
+}
+
+.campana-table td button:nth-child(2) {
+  background-color: #f44336;
+}
+
+.campana-table td button:nth-child(2):hover {
+  background-color: #e53935;
+}
+
+/* Estilo de impresión */
+@media print {
+  .campana-table {
+    width: 100%;
+    table-layout: fixed; /* Asegura que las columnas tengan un ancho consistente */
+    page-break-inside: auto;
+    font-size: 12px;
+  }
+
+  /* Asignamos anchos fijos a las columnas */
+  .campana-table th:nth-child(1), 
+  .campana-table td:nth-child(1) {
+    width: 10%; /* Ancho para la columna ID */
+  }
+
+  .campana-table th:nth-child(2), 
+  .campana-table td:nth-child(2) {
+    width: 20%; /* Ancho para la columna Nombre Campana */
+  }
+
+  .campana-table th:nth-child(3), 
+  .campana-table td:nth-child(3) {
+    width: 30%; /* Ancho para la columna Descripción */
+  }
+
+  .campana-table th:nth-child(4), 
+  .campana-table td:nth-child(4) {
+    width: 10%; /* Ancho para la columna Fecha Inicio */
+  }
+
+  .campana-table th:nth-child(5), 
+  .campana-table td:nth-child(5) {
+    width: 10%; /* Ancho para la columna Fecha Termino */
+  }
+
+  .campana-table th:nth-child(6), 
+  .campana-table td:nth-child(6) {
+    width: 15%; /* Ancho para la columna Dirección */
+  }
+
+  .campana-table th:nth-child(7), 
+  .campana-table td:nth-child(7) {
+    width: 10%; /* Ancho para la columna Latitud */
+  }
+
+  .campana-table th:nth-child(8), 
+  .campana-table td:nth-child(8) {
+    width: 10%; /* Ancho para la columna Longitud */
+  }
+
+  .campana-table th:nth-child(9), 
+  .campana-table td:nth-child(9) {
+    width: 15%; /* Ancho para la columna Ciudad */
+  }
+
+  .campana-table td, .campana-table th {
+    word-wrap: break-word;
+  }
+
+  /* Evitar el desbordamiento de contenido */
+  body {
+    overflow-x: visible !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .puntos-wrapper {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .campana-table th, .campana-table td {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .campana-table {
+    font-size: 12px;
+  }
+
+  /* Ajuste para dispositivos pequeños */
+  .edicion-puntos-navbar {
+    padding: 10px;
+  }
+}
+
+.message-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none;
+    padding: 15px 20px;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+}
+
+

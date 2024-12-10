@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Puntos de Reciclaje</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #2c3e50;
+      padding: 1em;
+      color: white;
+      text-align: center;
+    }
+    .container {
+      margin: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+    }
+    td {
+      text-align: center;
+    }
+    .delete-btn {
+      background-color: #e74c3c;
+      color: white;
+      padding: 5px 10px;
+      border: none;
+      cursor: pointer;
+    }
+    .delete-btn:hover {
+      background-color: #c0392b;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h2>Gestión de Puntos de Reciclaje</h2>
+  </nav>
+
+  <div class="container">
+    <table id="recyclingTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Dirección</th>
+          <th>Latitud</th>
+          <th>Longitud</th>
+          <th>Ciudad</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="recyclingData">
+        <!-- Los datos se cargarán aquí dinámicamente -->
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    async function fetchData() {
+      const response = await fetch('puntos.php'); // PHP para obtener datos
+      const data = await response.json();
+      const tbody = document.getElementById('recyclingData');
+      tbody.innerHTML = '';
+
+      data.forEach((punto) => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${punto.Id_punto}</td>
+          <td>${punto.Nombre}</td>
+          <td>${punto.Dirección}</td>
+          <td>${punto.Latitud}</td>
+          <td>${punto.Longitud}</td>
+          <td>${punto.Ciudad}</td>
+          <td><button class="delete-btn" onclick="deletePunto(${punto.Id_punto})">Eliminar</button></td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    async function deletePunto(id) {
+      if (confirm('¿Estás seguro de que deseas eliminar este punto?')) {
+        const response = await fetch('eliminar.php?id=' + id, { method: 'GET' });
+        const result = await response.text();
+        if (result === 'success') {
+          alert('Punto eliminado');
+          fetchData(); // Recargar datos después de eliminar
+        } else {
+          alert('Error al eliminar el punto');
+        }
+      }
+    }
+
+    fetchData(); // Cargar datos cuando la página se carga
+  </script>
+
+  <?php
+    // puntos.php - Obtener datos de la base de datos
+    if ($_SERVER['REQUEST_METHOD'] === 'GET' && basename($_SERVER['PHP_SELF']) === 'index.php') {
+      $servername = "localhost";
+      $username = "nublerec_nublerec";
+      $password = "B3lsaj^vNrL9";
+      $dbname = "nublerec_Recicla";
+
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      if ($conn->connect_error) {
+        die("Error de conexión: " . $conn->connect_error);
+      }
+
+      $sql = "SELECT Id_punto, Nombre, Dirección, Latitud, Longitud, Ciudad FROM Puntos_reclajes";
+      $result = $conn->query($sql);
+
+      $puntos = [];
+      if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+          $puntos[] = $row;
+        }
+      }
+      echo "<script>const puntos = " . json_encode($puntos) . "; document.addEventListener('DOMContentLoaded', () => { renderData(puntos); });</script>";
+
+      $conn->close();
+    }
+
+    // eliminar.php - Eliminar un punto de la base de datos
+    if (isset($_GET['id'])) {
+      $servername = "localhost";
+      $username = "nublerec_nublerec";
+      $password = "B3lsaj^vNrL9";
+      $dbname = "nublerec_Recicla";
+
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      if ($conn->connect_error) {
+        die("Error de conexión: " . $conn->connect_error);
+      }
+
+      $id = intval($_GET['id']);
+      $sql = "DELETE FROM Puntos_reclajes WHERE Id_punto = $id";
+
+      if ($conn->query($sql) === TRUE) {
+        echo "success";
+      } else {
+        echo "error";
+      }
+
+      $conn->close();
+      exit();
+    }
+  ?>
+</body>
+</html>

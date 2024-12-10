@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Nuestra-App - NubleRecicla</title>
+    <meta property="og:title" content="Nuestra-App - NubleRecicla" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Titillium Web;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 600;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-scheme-green100);
+        background: var(--dl-color-scheme-yellow20);
+        overflow-x: hidden;
+        fill: var(--dl-color-scheme-green100);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    />
+    <!--This is the head section-->
+    <!-- <script type="text/javascript"> ... </script> -->
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./nuestra-app.css" rel="stylesheet" />
+
+      <div class="nuestra-app-container1">
+        <div class="nuestra-app-navbar navbar-container">
+          <div class="max-width">
+            <header
+              data-thq="thq-navbar"
+              class="nuestra-app-navbar-interactive"
+            >
+              <div class="nuestra-app-logo1">
+                <img
+                  alt="image"
+                  src="public/1.png"
+                  class="nuestra-app-image1"
+                />
+                <span>ÑubleRecicla</span>
+              </div>
+              <div data-thq="thq-navbar-nav" class="nuestra-app-desktop-menu">
+                <div class="nuestra-app-links1">
+                  <a href="index.html" class="nuestra-app-text11 navLink">
+                    Inicio
+                  </a>
+                  <a href="nuestra-app.html" class="nuestra-app-navlink1">
+                    Nuestra App
+                  </a>
+                  <a href="nosotros.html" class="nuestra-app-navlink2">
+                    Nosotros
+                  </a>
+                  <a href="contactanos.html" class="nuestra-app-text12 navLink">
+                    Contáctanos
+                  </a>
+                  <a href="iniciar-sesion.html" class="button-secondary button">
+                    Iniciar Sesión
+                  </a>
+                  <button class="button button-primary">Pruébalo Gratis</button>
+                </div>
+              </div>
+              <div data-thq="thq-burger-menu" class="nuestra-app-burger-menu">
+                <svg viewBox="0 0 1024 1024" class="nuestra-app-icon1">
+                  <path
+                    d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                  ></path>
+                </svg>
+              </div>
+              <div data-thq="thq-mobile-menu" class="nuestra-app-mobile-menu">
+                <div class="nuestra-app-nav">
+                  <div class="nuestra-app-top">
+                    <div class="nuestra-app-logo2">
+                      <img
+                        alt="image"
+                        src="public/group%202.svg"
+                        class="nuestra-app-image2"
+                      />
+                      <span>ÑubleRecicla</span>
+                    </div>
+                    <div
+                      data-thq="thq-close-menu"
+                      class="nuestra-app-close-menu"
+                    >
+                      <svg viewBox="0 0 1024 1024" class="nuestra-app-icon3">
+                        <path
+                          d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <nav class="nuestra-app-links2">
+                    <a href="index.html" class="nuestra-app-navlink3">Inicio</a>
+                    <a href="nuestra-app.html" class="nuestra-app-navlink4">
+                      Nuestra App
+                    </a>
+                    <a href="nosotros.html" class="nuestra-app-navlink5">
+                      Nosotros
+                    </a>
+                    <a href="contactanos.html" class="nuestra-app-navlink6">
+                      Contáctanos
+                    </a>
+                  </nav>
+                  <div class="nuestra-app-buttons">
+                      <a href="iniciar-sesion.html" class="button-secondary button">
+                        Iniciar Sesión
+                      </a>
+                    <button class="button button-primary">
+                      Pruébalo Gratis
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </header>
+          </div>
+        </div>
+        <div class="nuestra-app-section section-container">
+          <div class="nuestra-app-max-width2 max-width">
+            <img
+              alt="image"
+              src="./images/chillan.jpg"
+              class="nuestra-app-hero-image"
+            />
+            <div class="nuestra-app-content">
+              <span class="nuestra-app-text15 beforeHeading">Nuestra app</span>
+              <h1 class="nuestra-app-text16">
+                <span>Reciclaje más&nbsp;</span>
+                <span class="nuestra-app-text18">Fácil&nbsp;</span>
+                <span>en&nbsp;</span>
+                <span class="nuestra-app-text20">Ñuble</span>
+                <span></span>
+              </h1>
+              <span class="nuestra-app-text22">
+                ÑubleRecicla es una aplicación diseñada para hacer del
+                reciclaje una actividad fácil y accesible para todos en la
+                Región de Ñuble. Con nuestra app, los usuarios pueden localizar
+                rápidamente, puntos de reciclaje cercanos, recibir notificaciones
+                sobre eventos ambientales y aprender sobre prácticas sostenibles
+                para reducir su huella ecológica.
+              </span>
+              <div class="nuestra-app-container2">
+                <button class="button-secondary button bg-transparent">
+                  Descargar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script defer="">
+      window.onload = () => {
+        const runAllScripts = () => {
+          initializeAllAccordions()
+        }
+
+        const listenForUrlChanges = () => {
+          let url = location.href
+          document.body.addEventListener(
+            'click',
+            () => {
+              requestAnimationFrame(() => {
+                if (url !== location.href) {
+                  runAllScripts()
+                  url = location.href
+                }
+              })
+            },
+            true
+          )
+        }
+
+        const initializeAllAccordions = () => {
+          const allAccordions = document.querySelectorAll('[data-role="Accordion"]');
+
+          allAccordions.forEach((accordion) => {
+            const accordionHeader = accordion.querySelector('[data-type="accordion-header"]')
+            const accordionContent = accordion.querySelector('[data-type="accordion-content"]')
+
+            accordionHeader.addEventListener('click', () => {
+              if (accordionContent.style.maxHeight) {
+                accordionContent.style.maxHeight = ''
+              } else {
+                accordionContent.style.maxHeight = `${accordionContent.scrollHeight}px`
+              }
+            })
+          })
+        }
+
+        listenForUrlChanges()
+        runAllScripts()
+      }
+    </script>
+    <script
+      defer=""
+      src="https://unpkg.com/@teleporthq/teleport-custom-scripts"
+    ></script>
+  </body>
+</html>
