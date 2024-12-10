@@ -49,8 +49,8 @@ Este proyecto está bajo la licencia **MIT**, lo que significa que puedes usar, 
 Para preguntas o comentarios, puedes contactarme o al equipo en:
 
 - **Autores**: Diego Jeldres, Sebastian Figueroa 
-- **Email**: [diego1jeldres@gmail.com](mailto:diego1jeldres@gmail.com),[sebastian.figueroa5@virginiogomez.cl ](mailto:sebastian.figueroa5@virginiogomez.cl )
-- **GitHub**: [Amaz0nCs](https://github.com/Amaz0nCs),[Sebasignacioespejo ]([https://github.com/Amaz0nCs](https://github.com/Sebasignacioespejo))
+- **Email**: [diego1jeldres@gmail.com](mailto:diego1jeldres@gmail.com), [sebastian.figueroa5@virginiogomez.cl ](mailto:sebastian.figueroa5@virginiogomez.cl )
+- **GitHub**: [Amaz0nCs](https://github.com/Amaz0nCs), [Sebasignacioespejo](https://github.com/Sebasignacioespejo)
 
 ---
 
